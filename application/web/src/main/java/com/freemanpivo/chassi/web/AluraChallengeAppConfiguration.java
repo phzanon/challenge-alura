@@ -10,14 +10,19 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AluraChallengeAppConfiguration {
 
-    @Bean
-    GetUserDetails getUserDetails(RetrieveUserStored retrieveUserStored) {
-        return new GetUserDetails(retrieveUserStored);
-    }
+	@Bean
+	GetUserDetails getUserDetails(RetrieveUserStored retrieveUserStored) {
+		return new GetUserDetails(retrieveUserStored);
+	}
 
-    @Bean
-    SaveVideoInfo saveVideoInfo(SaveVideoModelPort saveVideoModelPort) {
-        return new SaveVideoInfo(saveVideoModelPort);
-    }
+	@Bean
+	SaveVideoInfo saveVideoInfo(SaveVideoModelPort saveVideoModelPort) {
+		return new SaveVideoInfo(saveVideoModelPort);
+	}
+
+	@Bean
+	SaveVideoInfo findVideoInfo(SaveVideoModelPort saveVideoModelPort) {
+		return new SaveVideoInfo(saveVideoModelPort);
+	}
 
 }
