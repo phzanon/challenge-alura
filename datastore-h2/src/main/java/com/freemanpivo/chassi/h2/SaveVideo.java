@@ -23,10 +23,4 @@ public class SaveVideo implements SaveVideoModelPort {
 		VideoEntity videoEntity = repository.save(mapper.toEntity(video));
 		return mapper.toModel(videoEntity);
 	}
-
-	@Override
-	public List<Video> findAll() {
-		List<VideoEntity> videoEntity = repository.findAll();
-		return null;
-	}
 }

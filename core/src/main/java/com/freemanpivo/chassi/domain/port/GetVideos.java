@@ -1,11 +1,10 @@
 package com.freemanpivo.chassi.domain.port;
 
-import java.util.List;
-
 import com.freemanpivo.chassi.domain.model.Video;
 
-public interface SaveVideoModelPort {
+import java.util.List;
 
-    Video save(Video video);
+public interface GetVideos {
 
+    List<Video> getAll();
 }

@@ -1,6 +1,6 @@
 package com.freemanpivo.chassi.web.api;
 
-import com.freemanpivo.chassi.domain.port.command.GetVideoModelPort;
+import com.freemanpivo.chassi.domain.port.command.SaveVideoModelPort;
 import com.freemanpivo.chassi.web.dto.VideoDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/videos")
 @RequiredArgsConstructor
 @Slf4j
-public class VideoController {
+public class VideoPostController {
 
-    final GetVideoModelPort command;
+    final SaveVideoModelPort command;
 
     @PostMapping(name = "/")
     public ResponseEntity<VideoDto> save(@RequestBody VideoDto video) {
@@ -27,13 +27,5 @@ public class VideoController {
                     video.getDescricao(),
                     video.getUrl());
         return ResponseEntity.ok(video);
-    }
-    
-    
-    @GetMapping(name = "/")
-    public ResponseEntity<VideoDto> findAll() {
-        log.info("Request todos os Videos");
-        VideoDto videoDto = command.findAll();
-        return ResponseEntity.ok(videoDto);
     }
 }
