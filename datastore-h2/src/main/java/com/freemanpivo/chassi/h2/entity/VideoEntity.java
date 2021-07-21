@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Table(name = "VIDEO")
 public class VideoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id",unique=true, nullable = false)
     private String id;
