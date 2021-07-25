@@ -13,7 +13,9 @@ public enum ErrorMessageEnum {
     E005("005","Campo Url não foi preenchido!"),
     E006("006","Id não encontrado!"),
     E007("007", "Video não encontrado!"),
-    E008("008", "Falha ao atualizar vídeo requisitado! Video nao encontrado!")
+    E008("008", "Falha ao atualizar vídeo requisitado! Video nao encontrado!"),
+    E009("009", "Falha ao apagar video!"),
+    E010("010", "Falha ao apagar vídeo! Video nao foi encontrado!")
     ;
 
     private final String code;
