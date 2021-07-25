@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.h2;
+package com.freemanpivo.chassi.h2.operations;
 
 import org.springframework.stereotype.Component;
 
@@ -13,15 +13,15 @@ import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-public class UpdateVideo implements UpdateVideoModelPort {
+public class UpdateVideoById implements UpdateVideoModelPort {
 
 	private final VideoEntityRepository repository;
 	private final VideoEntityMapper mapper;
 
 	@Override
-	public Video update(String id, Video video) {
+	public Video update(Video video) {
 
-		final var videoEntitie = repository.findById(id);
+		final var videoEntitie = repository.findById(video.getId());
 
 		if (videoEntitie.isPresent()) {
 

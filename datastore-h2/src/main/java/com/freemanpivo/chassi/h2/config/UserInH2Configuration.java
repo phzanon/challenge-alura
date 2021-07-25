@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.h2;
+package com.freemanpivo.chassi.h2.config;
 
 import com.freemanpivo.chassi.h2.entity.UserEntity;
 import com.freemanpivo.chassi.h2.entity.VideoEntity;
@@ -24,9 +24,9 @@ public class UserInH2Configuration {
     @Bean
     public CommandLineRunner loadDataVideo(VideoEntityRepository repository) {
         return args -> {
-            repository.save(new VideoEntity("abc", "Pedro", "Descrição", "url://"));
-            repository.save(new VideoEntity("123", "Duro de matar", "Descrição", "url://"));
-            repository.save(new VideoEntity("234cde", "Duro de Matar 2", "Descrição", "url://"));
+            repository.save(new VideoEntity(1L, "Pedro", "Descrição", "url://"));
+            repository.save(new VideoEntity(2L, "Duro de matar", "Descrição", "url://"));
+            repository.save(new VideoEntity(3L, "Duro de Matar 2", "Descrição", "url://"));
         };
     }
 }

@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.h2;
+package com.freemanpivo.chassi.h2.operations;
 
 import com.freemanpivo.chassi.domain.model.User;
 import com.freemanpivo.chassi.domain.port.RetrieveUserStored;
