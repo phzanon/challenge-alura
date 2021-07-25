@@ -1,7 +1,7 @@
 package com.freemanpivo.chassi.web.api;
 
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.command.GetVideosByIdPort;
+import com.freemanpivo.chassi.domain.port.command.GetVideosByIdCommand;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class VideoGetByIdController {
 
-    private final GetVideosByIdPort command;
+    private final GetVideosByIdCommand command;
 
     @GetMapping("/")
     public ResponseEntity<Video> getById(@RequestParam("id") String id) {

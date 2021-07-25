@@ -1,7 +1,7 @@
 package com.freemanpivo.chassi.web.api;
 
 import com.freemanpivo.chassi.domain.model.User;
-import com.freemanpivo.chassi.domain.port.GetModelPort;
+import com.freemanpivo.chassi.domain.port.operations.GetModelPort;
 import com.freemanpivo.chassi.web.dto.UserDto;
 import com.freemanpivo.chassi.web.mappers.UserDtoMapper;
 import lombok.RequiredArgsConstructor;

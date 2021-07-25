@@ -1,6 +1,6 @@
 package com.freemanpivo.chassi.web.api;
 
-import com.freemanpivo.chassi.domain.port.command.SaveVideoModelPort;
+import com.freemanpivo.chassi.domain.port.command.SaveVideoCommand;
 import com.freemanpivo.chassi.domain.util.VideoValidator;
 import com.freemanpivo.chassi.web.dto.VideoDto;
 import com.freemanpivo.chassi.web.mappers.VideoDtoMapper;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class VideoPostController {
 
-    private final SaveVideoModelPort command;
+    private final SaveVideoCommand command;
     private final VideoDtoMapper mapper;
 
     @PostMapping(name = "/")

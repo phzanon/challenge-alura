@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.freemanpivo.chassi.domain.port.UpdateVideoModelPort;
+import com.freemanpivo.chassi.domain.port.operations.UpdateVideoModelPort;
 import com.freemanpivo.chassi.domain.util.VideoValidator;
 import com.freemanpivo.chassi.web.dto.VideoDto;
 import com.freemanpivo.chassi.web.mappers.VideoDtoMapper;
