@@ -1,14 +1,14 @@
 package com.freemanpivo.chassi.domain.usecase;
 
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.GetVideos;
-import com.freemanpivo.chassi.domain.port.command.GetVideosPort;
+import com.freemanpivo.chassi.domain.port.operations.GetVideos;
+import com.freemanpivo.chassi.domain.port.command.GetVideosCommand;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @RequiredArgsConstructor
-public class RetrieveVideos implements GetVideosPort {
+public class RetrieveVideos implements GetVideosCommand {
 
     private final GetVideos getVideos;
 

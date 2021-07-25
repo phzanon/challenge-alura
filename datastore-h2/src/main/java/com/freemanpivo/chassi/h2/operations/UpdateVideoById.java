@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.UpdateVideoModelPort;
+import com.freemanpivo.chassi.domain.port.operations.UpdateVideoModelPort;
 import com.freemanpivo.chassi.h2.mapper.VideoEntityMapper;
 import com.freemanpivo.chassi.h2.repository.VideoEntityRepository;
 

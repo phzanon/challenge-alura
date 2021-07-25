@@ -3,13 +3,13 @@ package com.freemanpivo.chassi.domain.usecase;
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.command.SaveVideoModelPort;
+import com.freemanpivo.chassi.domain.port.command.SaveVideoCommand;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class UpdateVideo implements SaveVideoModelPort {
+public class UpdateVideo implements SaveVideoCommand {
 
-	private final SaveVideoModelPort port;
+	private final SaveVideoCommand port;
 
 	@Override
 	public Video save(Video video) {

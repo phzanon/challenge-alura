@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.domain.port;
+package com.freemanpivo.chassi.domain.port.operations;
 
 import com.freemanpivo.chassi.domain.model.User;
 

@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.domain.port;
+package com.freemanpivo.chassi.domain.port.operations;
 
 import java.util.List;
 

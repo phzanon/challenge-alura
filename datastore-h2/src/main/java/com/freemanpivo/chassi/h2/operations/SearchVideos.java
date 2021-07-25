@@ -1,8 +1,7 @@
 package com.freemanpivo.chassi.h2.operations;
 
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.GetVideos;
-import com.freemanpivo.chassi.domain.port.command.GetVideosPort;
+import com.freemanpivo.chassi.domain.port.operations.GetVideos;
 import com.freemanpivo.chassi.h2.mapper.VideoEntityMapper;
 import com.freemanpivo.chassi.h2.repository.VideoEntityRepository;
 import lombok.RequiredArgsConstructor;
