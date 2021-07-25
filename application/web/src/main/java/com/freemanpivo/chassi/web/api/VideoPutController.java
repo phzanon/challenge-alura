@@ -29,6 +29,6 @@ public class VideoPutController {
         log.info("Request Video: {}", videoDto);
         final var video = mapper.toModel(videoDto);
         VideoValidator.validate(video);
-        return ResponseEntity.ok(mapper.toDto(command.update(id, video)));
+        return ResponseEntity.ok(mapper.toDto(command.update(video)));
     }
 }

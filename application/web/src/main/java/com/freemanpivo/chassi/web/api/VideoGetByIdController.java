@@ -20,6 +20,6 @@ public class VideoGetByIdController {
 
     @GetMapping("/")
     public ResponseEntity<Video> getById(@RequestParam("id") String id) {
-        return ResponseEntity.ok(command.findVideosById(id));
+        return ResponseEntity.ok(command.findVideosById(Long.parseLong(id)));
     }
 }
