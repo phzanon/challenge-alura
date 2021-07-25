@@ -21,9 +21,9 @@ public class VideoValidator {
 
         List<ErrorField> errors = new ArrayList<>();
 
-        if(video.getId() == null || video.getId().equals(""))
-            errors.add(new ErrorField(ErrorMessageEnum.E002.getCode(),
-                    ErrorMessageEnum.E002.getMessage(), ""));
+//        if(video.getId() == null || video.getId().equals(""))
+//            errors.add(new ErrorField(ErrorMessageEnum.E002.getCode(),
+//                    ErrorMessageEnum.E002.getMessage(), ""));
         if(video.getDescricao() == null || video.getDescricao().equals(""))
             errors.add(new ErrorField(ErrorMessageEnum.E003.getCode(),
                     ErrorMessageEnum.E003.getMessage(), ""));

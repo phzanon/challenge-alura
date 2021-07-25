@@ -18,7 +18,7 @@ public class VideoGetByIdController {
 
     private final GetVideosByIdCommand command;
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<Video> getById(@RequestParam("id") String id) {
         return ResponseEntity.ok(command.findVideosById(Long.parseLong(id)));
     }
