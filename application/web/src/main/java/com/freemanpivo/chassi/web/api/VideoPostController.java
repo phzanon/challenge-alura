@@ -24,7 +24,7 @@ public class VideoPostController {
     private final VideoDtoMapper mapper;
     private final VideoPostDtoMapper videoPostDtoMapper;
 
-    @PostMapping(name = "/")
+    @PostMapping
     public ResponseEntity<VideoDto> save(@RequestBody VideoPostDto videoDto) {
         log.info("Request Video: {}", videoDto);
         final var video = videoPostDtoMapper.toModel(videoDto);
