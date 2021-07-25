@@ -1,2 +1,6 @@
-package com.freemanpivo.chassi.domain.port.command;public interface DeleteVideoPort {
+package com.freemanpivo.chassi.domain.port.command;
+
+public interface DeleteVideoCommand {
+
+    Boolean deleteVideoById(Long id);
 }
