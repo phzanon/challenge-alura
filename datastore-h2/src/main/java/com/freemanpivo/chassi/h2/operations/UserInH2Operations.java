@@ -1,7 +1,7 @@
-package com.freemanpivo.chassi.h2;
+package com.freemanpivo.chassi.h2.operations;
 
 import com.freemanpivo.chassi.domain.model.User;
-import com.freemanpivo.chassi.domain.port.RetrieveUserStored;
+import com.freemanpivo.chassi.domain.port.operations.RetrieveUserStored;
 import com.freemanpivo.chassi.h2.entity.UserEntity;
 import com.freemanpivo.chassi.h2.mapper.UserEntityMapper;
 import com.freemanpivo.chassi.h2.repository.UserEntityRepository;

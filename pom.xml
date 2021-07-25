@@ -21,7 +21,7 @@
 	<artifactId>alurachallenge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>alurachallenge</name>
-	<description>Maven Multimodule project</description>
+	<description>Alura Challenge Back-End Project</description>
 
 	<properties>
 		<java.version>11</java.version>

@@ -1,14 +1,13 @@
 package com.freemanpivo.chassi.domain.usecase;
 
 import com.freemanpivo.chassi.domain.model.User;
-import com.freemanpivo.chassi.domain.port.GetModelPort;
-import com.freemanpivo.chassi.domain.port.RetrieveUserStored;
+import com.freemanpivo.chassi.domain.port.operations.GetModelPort;
+import com.freemanpivo.chassi.domain.port.operations.RetrieveUserStored;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 public class GetUserDetails implements GetModelPort<User> {
