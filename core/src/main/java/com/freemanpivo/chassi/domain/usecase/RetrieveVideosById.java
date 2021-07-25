@@ -13,7 +13,7 @@ public class RetrieveVideosById implements GetVideosByIdPort {
 
 
     @Override
-    public Video findVideosById(String id) {
+    public Video findVideosById(Long id) {
         final var videos = getVideosById.getById(id);
         if(videos == null) {
            throw new RuntimeException("Empty videos List");

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface GetVideosById {
 
-   Video getById(String id);
+   Video getById(Long id);
 }

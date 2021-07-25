@@ -4,5 +4,5 @@ import com.freemanpivo.chassi.domain.model.Video;
 
 public interface GetVideosByIdPort {
 
-	Video findVideosById(String id);
+	Video findVideosById(Long id);
 } 
