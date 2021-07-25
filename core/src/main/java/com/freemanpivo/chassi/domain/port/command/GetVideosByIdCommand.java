@@ -2,7 +2,7 @@ package com.freemanpivo.chassi.domain.port.command;
 
 import com.freemanpivo.chassi.domain.model.Video;
 
-public interface GetVideosByIdPort {
+public interface GetVideosByIdCommand {
 
 	Video findVideosById(Long id);
 } 

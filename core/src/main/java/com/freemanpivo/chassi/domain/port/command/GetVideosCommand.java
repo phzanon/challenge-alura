@@ -4,7 +4,7 @@ import com.freemanpivo.chassi.domain.model.Video;
 
 import java.util.List;
 
-public interface GetVideosPort {
+public interface GetVideosCommand {
 
     List<Video> findVideos();
 }
