@@ -1,16 +1,9 @@
 package com.freemanpivo.chassi.web;
 
+import com.freemanpivo.chassi.domain.port.operations.*;
+import com.freemanpivo.chassi.domain.usecase.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.freemanpivo.chassi.domain.port.GetVideos;
-import com.freemanpivo.chassi.domain.port.GetVideosById;
-import com.freemanpivo.chassi.domain.port.RetrieveUserStored;
-import com.freemanpivo.chassi.domain.port.SaveVideoModelPort;
-import com.freemanpivo.chassi.domain.usecase.GetUserDetails;
-import com.freemanpivo.chassi.domain.usecase.RetrieveVideos;
-import com.freemanpivo.chassi.domain.usecase.RetrieveVideosById;
-import com.freemanpivo.chassi.domain.usecase.SaveVideoInfo;
 
 @Configuration
 public class AluraChallengeAppConfiguration {
@@ -34,4 +27,7 @@ public class AluraChallengeAppConfiguration {
 	RetrieveVideosById retrieveVideosById(GetVideosById getVideosById) {
 		return new RetrieveVideosById(getVideosById);
 	}
+
+	@Bean
+	DeleteVideo deleteVideo(DeleteVideoPort deleteVideoPort) { return new DeleteVideo(deleteVideoPort); }
 }
