@@ -1,10 +1,9 @@
 package com.freemanpivo.chassi.domain.usecase;
 
-import java.util.List;
-
+import com.freemanpivo.chassi.domain.exception.BusinessException;
+import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.command.SaveVideoModelPort;
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -14,11 +13,11 @@ public class SaveVideoInfo implements SaveVideoModelPort {
 
 	@Override
 	public Video save(Video video) {
-		Video video1 = port.save(video);
-		if (video1 == null) {
-			throw new RuntimeException("Erro ao salvar", null);
+		video = port.save(video);
+		if (video == null) {
+			throw new BusinessException(ErrorMessageEnum.E000.getCode(), ErrorMessageEnum.E000.getMessage());
 		}
-		return video1;
+		return video;
 	}
 
 }
