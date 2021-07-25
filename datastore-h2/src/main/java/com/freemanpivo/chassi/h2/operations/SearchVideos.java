@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.h2;
+package com.freemanpivo.chassi.h2.operations;
 
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.GetVideos;

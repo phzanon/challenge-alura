@@ -13,9 +13,9 @@ import javax.persistence.*;
 @Table(name = "VIDEO")
 public class VideoEntity {
     @Id
-    @Basic(optional = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id",unique=true, nullable = false)
-    private String id;
+    private Long id;
 
     @Column(name = "titulo", nullable = false)
     private String titulo;
