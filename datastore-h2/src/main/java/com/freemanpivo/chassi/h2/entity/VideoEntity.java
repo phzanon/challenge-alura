@@ -17,6 +17,10 @@ public class VideoEntity {
     @Column(name = "id",unique=true, nullable = false)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "categoriaId")
+    private CategoryEntity category;
+
     @Column(name = "titulo", nullable = false)
     private String titulo;
 
