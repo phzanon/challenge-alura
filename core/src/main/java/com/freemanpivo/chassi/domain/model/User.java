@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Data
 public class User {
     private Long id;
+    private Category category;
     private String name;
     private LocalDate birthDate;
     private String ageInYears;
