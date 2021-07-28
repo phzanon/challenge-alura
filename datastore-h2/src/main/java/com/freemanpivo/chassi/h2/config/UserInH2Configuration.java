@@ -26,16 +26,16 @@ public class UserInH2Configuration {
     @Bean
     public CommandLineRunner loadDataCategory(CategoryEntityRepository repository) {
         return args -> {
-            repository.save(new CategoryEntity(1L, "TESTE"));
+            repository.save(new CategoryEntity(1L, "LIVRE", "AZUL"));
         };
     }
 
     @Bean
     public CommandLineRunner loadDataVideo(VideoEntityRepository repository) {
         return args -> {
-            repository.save(new VideoEntity(1L, new CategoryEntity(1L, "TESTE"), "Pedro", "Descrição", "url://"));
-            repository.save(new VideoEntity(2L, new CategoryEntity(1L, "TESTE"), "Duro de matar", "Descrição", "url://"));
-            repository.save(new VideoEntity(3L, new CategoryEntity(1L, "TESTE"), "Duro de Matar 2", "Descrição", "url://"));
+            repository.save(new VideoEntity(1L, new CategoryEntity(1L, "LIVRE", "AZUL"), "Pedro", "Descrição", "url://"));
+            repository.save(new VideoEntity(2L, new CategoryEntity(1L, "LIVRE", "AZUL"), "Duro de matar", "Descrição", "url://"));
+            repository.save(new VideoEntity(3L, new CategoryEntity(1L, "LIVRE", "AZUL"), "Duro de Matar 2", "Descrição", "url://"));
         };
     }
 }
