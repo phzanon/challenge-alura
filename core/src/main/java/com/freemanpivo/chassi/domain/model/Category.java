@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 public class Category {
 
     private Long id;
-    private String description;
+    private String titulo;
+    private String cor;
 }
