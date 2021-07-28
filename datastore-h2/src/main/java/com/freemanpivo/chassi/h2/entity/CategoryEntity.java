@@ -18,7 +18,10 @@ public class CategoryEntity {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "descricao", nullable = false)
-    private String description;
+    @Column(name = "titulo", nullable = false)
+    private String titulo;
+    
+    @Column(name = "cor", nullable = false)
+    private String cor;
 
 }
