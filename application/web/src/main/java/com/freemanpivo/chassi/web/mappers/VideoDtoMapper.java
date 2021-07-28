@@ -3,7 +3,6 @@ package com.freemanpivo.chassi.web.mappers;
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.web.dto.VideoDto;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface VideoDtoMapper {
