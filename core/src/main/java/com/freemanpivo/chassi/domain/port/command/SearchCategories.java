@@ -7,4 +7,6 @@ import java.util.List;
 public interface SearchAllCategories {
 
     List<Category> getAllCategories();
+
+    Category getCategoryById(Long id);
 }
