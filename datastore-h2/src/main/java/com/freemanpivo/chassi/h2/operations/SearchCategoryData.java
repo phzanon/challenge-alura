@@ -3,6 +3,7 @@ package com.freemanpivo.chassi.h2.operations;
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Category;
+import com.freemanpivo.chassi.domain.port.command.SearchCategories;
 import com.freemanpivo.chassi.domain.port.operations.GetCategories;
 import com.freemanpivo.chassi.h2.mapper.CategoryEntityMapper;
 import com.freemanpivo.chassi.h2.repository.CategoryEntityRepository;
@@ -14,13 +15,13 @@ import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
-public class SearchCategories implements GetCategories {
+public class SearchCategoryData implements SearchCategories {
 
     private final CategoryEntityRepository repository;
     private final CategoryEntityMapper mapper;
 
     @Override
-    public List<Category> getCategories() {
+    public List<Category> getAllCategories() {
         return repository
                 .findAll()
                 .stream()
