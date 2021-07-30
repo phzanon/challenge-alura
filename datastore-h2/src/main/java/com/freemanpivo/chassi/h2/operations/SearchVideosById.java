@@ -3,7 +3,6 @@ package com.freemanpivo.chassi.h2.operations;
 import org.springframework.stereotype.Component;
 
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.operations.GetVideosById;
 import com.freemanpivo.chassi.h2.mapper.VideoEntityMapper;
 import com.freemanpivo.chassi.h2.repository.VideoEntityRepository;
 
