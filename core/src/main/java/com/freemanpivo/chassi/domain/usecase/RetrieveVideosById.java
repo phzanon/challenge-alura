@@ -1,9 +1,10 @@
 package com.freemanpivo.chassi.domain.usecase;
 
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.operations.GetVideosById;
 import com.freemanpivo.chassi.domain.port.command.GetVideosByIdCommand;
 
+import com.freemanpivo.chassi.domain.port.operations.GetVideos;
+import com.freemanpivo.chassi.domain.port.operations.GetVideosById;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

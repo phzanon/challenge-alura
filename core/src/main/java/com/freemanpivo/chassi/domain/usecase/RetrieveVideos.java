@@ -12,7 +12,6 @@ public class RetrieveVideos implements GetVideosCommand {
 
     private final GetVideos getVideos;
 
-
     @Override
     public List<Video> findVideos() {
         final var videos = getVideos.getAll();

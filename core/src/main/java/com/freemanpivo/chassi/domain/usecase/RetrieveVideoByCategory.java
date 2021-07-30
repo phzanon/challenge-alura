@@ -2,6 +2,7 @@ package com.freemanpivo.chassi.domain.usecase;
 
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.command.SearchVideoByCategory;
+import com.freemanpivo.chassi.domain.port.operations.GetVideos;
 import com.freemanpivo.chassi.domain.port.operations.GetVideosByCategory;
 import lombok.RequiredArgsConstructor;
 
