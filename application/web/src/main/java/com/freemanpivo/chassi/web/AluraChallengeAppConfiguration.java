@@ -30,4 +30,9 @@ public class AluraChallengeAppConfiguration {
 
 	@Bean
 	DeleteVideo deleteVideo(DeleteVideoPort deleteVideoPort) { return new DeleteVideo(deleteVideoPort); }
+
+	@Bean
+	RetrieveVideoByCategory retrieveVideoByCategory(GetVideosByCategory getVideosByCategory) {
+		return new RetrieveVideoByCategory(getVideosByCategory);
+	}
 }

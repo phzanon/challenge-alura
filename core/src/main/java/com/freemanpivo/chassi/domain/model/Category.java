@@ -4,15 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class User {
+public class Category {
+
     private Long id;
-    private Category category;
-    private String name;
-    private LocalDate birthDate;
-    private String ageInYears;
+    private String titulo;
+    private String cor;
 }

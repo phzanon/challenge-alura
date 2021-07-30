@@ -24,8 +24,8 @@ public class VideoPutController {
     private final UpdateVideoModelPort command;
     private final VideoDtoMapper mapper;
 
-    @PutMapping(name = "/")
-    public ResponseEntity<VideoDto> update(@RequestParam("id") String id, @RequestBody VideoDto videoDto) {
+    @PutMapping
+    public ResponseEntity<VideoDto> update(@RequestBody VideoDto videoDto) {
         log.info("Request Video: {}", videoDto);
         final var video = mapper.toModel(videoDto);
         VideoValidator.validate(video);
