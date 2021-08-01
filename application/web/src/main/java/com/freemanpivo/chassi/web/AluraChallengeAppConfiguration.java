@@ -1,5 +1,6 @@
 package com.freemanpivo.chassi.web;
 
+import com.freemanpivo.chassi.domain.port.command.SearchCategories;
 import com.freemanpivo.chassi.domain.port.operations.*;
 import com.freemanpivo.chassi.domain.usecase.*;
 import org.springframework.context.annotation.Bean;
@@ -41,5 +42,10 @@ public class AluraChallengeAppConfiguration {
 	@Bean
 	SaveCategoryInfo saveCategoryInfo(SaveCategoryModelPort saveCategoryModelPort) {
 		return new SaveCategoryInfo(saveCategoryModelPort);
+	}
+
+	@Bean
+	DeleteCategory deleteCategory(DeleteCategoryById deleteCategoryById, SearchCategories searchCategories) {
+		return new DeleteCategory(deleteCategoryById, searchCategories);
 	}
 }
