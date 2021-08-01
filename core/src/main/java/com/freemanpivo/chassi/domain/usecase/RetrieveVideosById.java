@@ -1,5 +1,7 @@
 package com.freemanpivo.chassi.domain.usecase;
 
+import com.freemanpivo.chassi.domain.exception.BusinessException;
+import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.command.GetVideosByIdCommand;
 import com.freemanpivo.chassi.domain.port.operations.GetVideosById;
@@ -15,7 +17,7 @@ public class RetrieveVideosById implements GetVideosByIdCommand {
     public Video findVideosById(Long id) {
         final var videos = getVideosById.getById(id);
         if(videos == null) {
-           throw new RuntimeException("Empty videos List");
+           throw new BusinessException(ErrorMessageEnum.E007.getCode(), ErrorMessageEnum.E007.getMessage());
         }
         return videos;
     }
