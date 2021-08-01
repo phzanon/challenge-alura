@@ -22,17 +22,24 @@ public class AluraChallengeAppConfiguration {
 	RetrieveVideos retrieveVideos(GetVideos getVideos) {
 		return new RetrieveVideos(getVideos);
 	}
-	
+
 	@Bean
 	RetrieveVideosById retrieveVideosById(GetVideosById getVideosById) {
 		return new RetrieveVideosById(getVideosById);
 	}
 
 	@Bean
-	DeleteVideo deleteVideo(DeleteVideoPort deleteVideoPort) { return new DeleteVideo(deleteVideoPort); }
+	DeleteVideo deleteVideo(DeleteVideoPort deleteVideoPort) {
+		return new DeleteVideo(deleteVideoPort);
+	}
 
 	@Bean
 	RetrieveVideoByCategory retrieveVideoByCategory(GetVideosByCategory getVideosByCategory) {
 		return new RetrieveVideoByCategory(getVideosByCategory);
+	}
+
+	@Bean
+	SaveCategoryInfo saveCategoryInfo(SaveCategoryModelPort saveCategoryModelPort) {
+		return new SaveCategoryInfo(saveCategoryModelPort);
 	}
 }
