@@ -42,4 +42,9 @@ public class AluraChallengeAppConfiguration {
 	DeleteCategory deleteCategory(DeleteCategoryById deleteCategoryById, SearchCategories searchCategories) {
 		return new DeleteCategory(deleteCategoryById, searchCategories);
 	}
+
+	@Bean
+	UpdateVideo updateVideo(RetrieveVideosById retrieveVideosById, SaveVideoInfo saveVideoInfo) {
+		return new UpdateVideo(retrieveVideosById, saveVideoInfo);
+	}
 }

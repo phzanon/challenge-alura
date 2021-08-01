@@ -1,6 +1,7 @@
 package com.freemanpivo.chassi.web.api;
 
 import com.freemanpivo.chassi.domain.model.Video;
+import com.freemanpivo.chassi.domain.port.command.GetVideosByIdCommand;
 import com.freemanpivo.chassi.domain.port.command.GetVideosCommand;
 import com.freemanpivo.chassi.web.dto.response.ResponseGetAll;
 import com.freemanpivo.chassi.web.mappers.VideoGetDtoMapper;
@@ -9,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,6 +24,7 @@ public class VideoGetController {
 
     private final GetVideosCommand command;
     private final VideoGetDtoMapper mapper;
+    private final GetVideosByIdCommand getVideosByIdCommand;
 
     @GetMapping("/all")
     public ResponseEntity<List<Video>> getAll() {
@@ -35,5 +38,10 @@ public class VideoGetController {
                 .stream()
                 .map(mapper::toDto)
                 .collect(Collectors.toList())));
+    }
+
+    @GetMapping
+    public ResponseEntity<Video> getById(@RequestParam("id") String id) {
+        return ResponseEntity.ok(getVideosByIdCommand.findVideosById(Long.parseLong(id)));
     }
 }
