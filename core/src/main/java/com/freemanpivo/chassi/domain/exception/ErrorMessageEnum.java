@@ -15,7 +15,11 @@ public enum ErrorMessageEnum {
     E007("007", "Video não encontrado!"),
     E008("008", "Falha ao atualizar vídeo requisitado! Video nao encontrado!"),
     E009("009", "Falha ao apagar video!"),
-    E010("010", "Falha ao apagar vídeo! Video nao foi encontrado!")
+    E010("010", "Falha ao apagar vídeo! Video nao foi encontrado!"),
+    E011("011", "Categoria Não encontrada!"),
+    E012("012", "Id inválido"),
+    E013("013", "Campos Categoria inválidos"),
+    E014("014", "Campo Cor inválida")
     ;
 
     private final String code;

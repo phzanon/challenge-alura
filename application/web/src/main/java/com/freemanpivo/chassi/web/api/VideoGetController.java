@@ -3,7 +3,6 @@ package com.freemanpivo.chassi.web.api;
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.command.GetVideosCommand;
 import com.freemanpivo.chassi.web.dto.response.ResponseGetAll;
-import com.freemanpivo.chassi.web.dto.response.ResponseGetDto;
 import com.freemanpivo.chassi.web.mappers.VideoGetDtoMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
