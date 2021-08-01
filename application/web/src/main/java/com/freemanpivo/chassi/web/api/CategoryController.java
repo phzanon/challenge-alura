@@ -6,6 +6,7 @@ import com.freemanpivo.chassi.domain.model.Category;
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.command.SearchCategories;
 import com.freemanpivo.chassi.domain.port.command.SearchVideoByCategory;
+import com.freemanpivo.chassi.domain.util.IdValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -33,13 +34,14 @@ public class CategoryController {
 
     @GetMapping("/{id}/videos")
     public ResponseEntity<List<Video>> getAllVideosByCategory(@PathVariable("id") String id) {
+        IdValidator.validate(id);
         final var videos = searchVideoByCategory.getVideos(Long.parseLong(id));
         return ResponseEntity.ok(videos);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Category> getCategoryById(@PathVariable("id") String id) {
-        /**TODO fazer uma validação para o id */
+        IdValidator.validate(id);
         final var category = searchCategories.getCategoryById(Long.parseLong(id));
         return ResponseEntity.ok(category);
 
