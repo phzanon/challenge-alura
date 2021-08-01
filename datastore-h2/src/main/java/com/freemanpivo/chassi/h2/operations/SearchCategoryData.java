@@ -4,7 +4,6 @@ import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Category;
 import com.freemanpivo.chassi.domain.port.command.SearchCategories;
-import com.freemanpivo.chassi.domain.port.operations.GetCategories;
 import com.freemanpivo.chassi.h2.mapper.CategoryEntityMapper;
 import com.freemanpivo.chassi.h2.repository.CategoryEntityRepository;
 import lombok.RequiredArgsConstructor;

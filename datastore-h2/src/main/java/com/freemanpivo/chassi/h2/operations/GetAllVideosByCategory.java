@@ -1,7 +1,6 @@
 package com.freemanpivo.chassi.h2.operations;
 
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.operations.GetVideos;
 import com.freemanpivo.chassi.domain.port.operations.GetVideosByCategory;
 import com.freemanpivo.chassi.h2.mapper.VideoEntityMapper;
 import com.freemanpivo.chassi.h2.repository.VideoEntityRepository;

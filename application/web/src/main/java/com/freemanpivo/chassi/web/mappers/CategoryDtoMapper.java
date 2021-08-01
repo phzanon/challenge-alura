@@ -1,9 +1,8 @@
 package com.freemanpivo.chassi.web.mappers;
 
-import org.mapstruct.Mapper;
-
 import com.freemanpivo.chassi.domain.model.Category;
 import com.freemanpivo.chassi.web.dto.CategoryDto;
+import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface CategoryDtoMapper {

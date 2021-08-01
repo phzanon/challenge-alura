@@ -1,12 +1,11 @@
 package com.freemanpivo.chassi.domain.usecase;
 
-import java.util.List;
-
 import com.freemanpivo.chassi.domain.model.Video;
 import com.freemanpivo.chassi.domain.port.command.SearchVideoByCategory;
 import com.freemanpivo.chassi.domain.port.operations.GetVideosByCategory;
-
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 public class RetrieveVideoByCategory implements SearchVideoByCategory {

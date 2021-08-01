@@ -1,7 +1,6 @@
 package com.freemanpivo.chassi.web.dto;
 
 import com.freemanpivo.chassi.domain.model.Category;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
