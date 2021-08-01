@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class CategorySaveDto {
-    private String titulo;
-    private String cor;
+public class CategoryDto {
+	private String id;
+	private String titulo;
+	private String cor;
 }

@@ -3,6 +3,7 @@ package com.freemanpivo.chassi.domain.util;
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorField;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
+import com.freemanpivo.chassi.domain.model.Category;
 import com.freemanpivo.chassi.domain.model.Video;
 
 import java.util.ArrayList;
@@ -10,32 +11,53 @@ import java.util.List;
 
 public class VideoValidator {
 
-    public static void validate(Video video) {
-        if(video == null)
-            throw new BusinessException(ErrorMessageEnum.E001.getCode(),
-                    ErrorMessageEnum.E001.getMessage());
-        validarCampos(video);
-    }
+	public static void validate(Video video) {
+		if (video == null)
+			throw new BusinessException(ErrorMessageEnum.E001.getCode(), ErrorMessageEnum.E001.getMessage());
+		validarCampos(video);
+	}
+	
+	public static void validate(Category category) {
+		if (category == null)
+			throw new BusinessException(ErrorMessageEnum.E001.getCode(), ErrorMessageEnum.E001.getMessage());
+		validarCampos(category);
+	}
 
-    public static void validarCampos(Video video) {
+	public static void validarCampos(Video video) {
 
-        List<ErrorField> errors = new ArrayList<>();
+		List<ErrorField> errors = new ArrayList<>();
 
 //        if(video.getId() == null || video.getId().equals(""))
 //            errors.add(new ErrorField(ErrorMessageEnum.E002.getCode(),
 //                    ErrorMessageEnum.E002.getMessage(), ""));
-        if(video.getDescricao() == null || video.getDescricao().equals(""))
-            errors.add(new ErrorField(ErrorMessageEnum.E003.getCode(),
-                    ErrorMessageEnum.E003.getMessage(), ""));
-        if(video.getTitulo() == null || video.getTitulo().equals(""))
-            errors.add(new ErrorField(ErrorMessageEnum.E004.getCode(),
-                    ErrorMessageEnum.E004.getMessage(), ""));
-        if(video.getUrl() == null || video.getUrl().equals(""))
-            errors.add(new ErrorField(ErrorMessageEnum.E005.getCode(),
-                    ErrorMessageEnum.E005.getMessage(), ""));
+		if (video.getDescricao() == null || video.getDescricao().equals(""))
+			errors.add(new ErrorField(ErrorMessageEnum.E003.getCode(), ErrorMessageEnum.E003.getMessage(), ""));
+		if (video.getTitulo() == null || video.getTitulo().equals(""))
+			errors.add(new ErrorField(ErrorMessageEnum.E004.getCode(), ErrorMessageEnum.E004.getMessage(), ""));
+		if (video.getUrl() == null || video.getUrl().equals(""))
+			errors.add(new ErrorField(ErrorMessageEnum.E005.getCode(), ErrorMessageEnum.E005.getMessage(), ""));
 
-        if(!errors.isEmpty()) {
-            throw new BusinessException(ErrorMessageEnum.E000.getCode(), ErrorMessageEnum.E000.getMessage(), errors);
-        }
-    }
+		if (!errors.isEmpty()) {
+			throw new BusinessException(ErrorMessageEnum.E000.getCode(), ErrorMessageEnum.E000.getMessage(), errors);
+		}
+	}
+
+	public static void validarCampos(Category category) {
+
+		List<ErrorField> errors = new ArrayList<>();
+
+//        if(video.getId() == null || video.getId().equals(""))
+//            errors.add(new ErrorField(ErrorMessageEnum.E002.getCode(),
+//                    ErrorMessageEnum.E002.getMessage(), ""));
+		
+		// TODO: criar novas mensagens para a categoria
+		if (category.getTitulo() == null || category.getTitulo().equals(""))
+			errors.add(new ErrorField(ErrorMessageEnum.E003.getCode(), ErrorMessageEnum.E003.getMessage(), ""));
+		if (category.getCor() == null || category.getCor().equals(""))
+			errors.add(new ErrorField(ErrorMessageEnum.E004.getCode(), ErrorMessageEnum.E004.getMessage(), ""));
+
+		if (!errors.isEmpty()) {
+			throw new BusinessException(ErrorMessageEnum.E000.getCode(), ErrorMessageEnum.E000.getMessage(), errors);
+		}
+	}
 }
