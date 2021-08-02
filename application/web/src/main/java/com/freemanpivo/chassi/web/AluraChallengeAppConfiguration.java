@@ -1,10 +1,28 @@
 package com.freemanpivo.chassi.web;
 
-import com.freemanpivo.chassi.domain.port.command.SearchCategoriesCommand;
-import com.freemanpivo.chassi.domain.port.operations.*;
-import com.freemanpivo.chassi.domain.usecase.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.freemanpivo.chassi.domain.port.operations.DeleteCategoryById;
+import com.freemanpivo.chassi.domain.port.operations.DeleteVideoPort;
+import com.freemanpivo.chassi.domain.port.operations.GetCategories;
+import com.freemanpivo.chassi.domain.port.operations.GetVideos;
+import com.freemanpivo.chassi.domain.port.operations.GetVideosByCategory;
+import com.freemanpivo.chassi.domain.port.operations.GetVideosById;
+import com.freemanpivo.chassi.domain.port.operations.GetVideosByTitle;
+import com.freemanpivo.chassi.domain.port.operations.SaveCategoryModelPort;
+import com.freemanpivo.chassi.domain.port.operations.SaveVideoModelPort;
+import com.freemanpivo.chassi.domain.usecase.DeleteCategory;
+import com.freemanpivo.chassi.domain.usecase.DeleteVideo;
+import com.freemanpivo.chassi.domain.usecase.RetrieveCategories;
+import com.freemanpivo.chassi.domain.usecase.RetrieveVideoByCategory;
+import com.freemanpivo.chassi.domain.usecase.RetrieveVideos;
+import com.freemanpivo.chassi.domain.usecase.RetrieveVideosById;
+import com.freemanpivo.chassi.domain.usecase.RetrieveVideosByTitle;
+import com.freemanpivo.chassi.domain.usecase.SaveCategoryInfo;
+import com.freemanpivo.chassi.domain.usecase.SaveVideoInfo;
+import com.freemanpivo.chassi.domain.usecase.UpdateCategory;
+import com.freemanpivo.chassi.domain.usecase.UpdateVideo;
 
 @Configuration
 public class AluraChallengeAppConfiguration {
@@ -27,6 +45,11 @@ public class AluraChallengeAppConfiguration {
 	@Bean
 	RetrieveVideosById retrieveVideosById(GetVideosById getVideosById) {
 		return new RetrieveVideosById(getVideosById);
+	}
+
+	@Bean
+	RetrieveVideosByTitle retrieveVideosByTitle(GetVideosByTitle getVideosByTitle) {
+		return new RetrieveVideosByTitle(getVideosByTitle);
 	}
 
 	@Bean
