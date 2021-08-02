@@ -4,7 +4,7 @@ import com.freemanpivo.chassi.domain.model.Video;
 
 import java.util.List;
 
-public interface SearchVideoByCategory {
+public interface  SearchVideoByCategory {
 
     List<Video> getVideos(Long id);
 }

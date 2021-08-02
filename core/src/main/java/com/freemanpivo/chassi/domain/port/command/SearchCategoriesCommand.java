@@ -5,7 +5,7 @@ import com.freemanpivo.chassi.domain.model.Category;
 import java.util.List;
 import java.util.Optional;
 
-public interface SearchCategories {
+public interface SearchCategoriesCommand {
 
     List<Category> getAllCategories();
 
