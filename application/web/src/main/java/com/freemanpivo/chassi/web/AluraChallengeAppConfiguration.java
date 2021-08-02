@@ -1,6 +1,6 @@
 package com.freemanpivo.chassi.web;
 
-import com.freemanpivo.chassi.domain.port.command.SearchCategories;
+import com.freemanpivo.chassi.domain.port.command.SearchCategoriesCommand;
 import com.freemanpivo.chassi.domain.port.operations.*;
 import com.freemanpivo.chassi.domain.usecase.*;
 import org.springframework.context.annotation.Bean;
@@ -8,14 +8,20 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AluraChallengeAppConfiguration {
+
 	@Bean
-	SaveVideoInfo saveVideoInfo(SaveVideoModelPort saveVideoModelPort) {
-		return new SaveVideoInfo(saveVideoModelPort);
+	RetrieveCategories retrieveCategories(GetCategories getCategories) {
+		return new RetrieveCategories(getCategories);
 	}
 
 	@Bean
 	RetrieveVideos retrieveVideos(GetVideos getVideos) {
 		return new RetrieveVideos(getVideos);
+	}
+
+	@Bean
+	SaveVideoInfo saveVideoInfo(SaveVideoModelPort saveVideoModelPort, RetrieveCategories retrieveCategories) {
+		return new SaveVideoInfo(saveVideoModelPort, retrieveCategories);
 	}
 
 	@Bean
@@ -39,12 +45,17 @@ public class AluraChallengeAppConfiguration {
 	}
 
 	@Bean
-	DeleteCategory deleteCategory(DeleteCategoryById deleteCategoryById, SearchCategories searchCategories) {
-		return new DeleteCategory(deleteCategoryById, searchCategories);
+	DeleteCategory deleteCategory(DeleteCategoryById deleteCategoryById, RetrieveCategories retrieveCategories) {
+		return new DeleteCategory(deleteCategoryById, retrieveCategories);
 	}
 
 	@Bean
 	UpdateVideo updateVideo(RetrieveVideosById retrieveVideosById, SaveVideoInfo saveVideoInfo) {
 		return new UpdateVideo(retrieveVideosById, saveVideoInfo);
+	}
+
+	@Bean
+	UpdateCategory updateCategory(RetrieveCategories retrieveCategories, SaveCategoryInfo saveCategoryInfo) {
+		return new UpdateCategory(retrieveCategories, saveCategoryInfo);
 	}
 }
