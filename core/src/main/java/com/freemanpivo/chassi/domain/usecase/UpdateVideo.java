@@ -1,4 +1,4 @@
-package com.freemanpivo.chassi.domain.port.operations;
+package com.freemanpivo.chassi.domain.usecase;
 
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
