@@ -3,10 +3,11 @@ package com.freemanpivo.chassi.domain.port.command;
 import com.freemanpivo.chassi.domain.model.Category;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface SearchCategories {
 
     List<Category> getAllCategories();
 
-    Category getCategoryById(Long id);
+    Optional<Category> getCategoryById(Long id);
 }
