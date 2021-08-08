@@ -3,14 +3,15 @@ package com.freemanpivo.chassi.domain.usecase;
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Category;
-import com.freemanpivo.chassi.domain.port.command.SearchCategories;
+import com.freemanpivo.chassi.domain.port.command.SearchCategoriesCommand;
 import com.freemanpivo.chassi.domain.port.operations.GetCategories;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
-public class RetrieveCategories implements SearchCategories {
+public class RetrieveCategories implements SearchCategoriesCommand {
 
     private final GetCategories port;
 
@@ -24,7 +25,7 @@ public class RetrieveCategories implements SearchCategories {
     }
 
     @Override
-    public Category getCategoryById(Long id) {
+    public Optional<Category> getCategoryById(Long id) {
         final var category = port.getCategoryById(id);
 
         if(category == null) {

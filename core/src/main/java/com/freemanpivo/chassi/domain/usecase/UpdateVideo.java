@@ -3,21 +3,23 @@ package com.freemanpivo.chassi.domain.usecase;
 import com.freemanpivo.chassi.domain.exception.BusinessException;
 import com.freemanpivo.chassi.domain.exception.ErrorMessageEnum;
 import com.freemanpivo.chassi.domain.model.Video;
-import com.freemanpivo.chassi.domain.port.command.SaveVideoCommand;
+import com.freemanpivo.chassi.domain.port.command.UpdateVideoCommand;
+import com.freemanpivo.chassi.domain.usecase.RetrieveVideosById;
+import com.freemanpivo.chassi.domain.usecase.SaveVideoInfo;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class UpdateVideo implements SaveVideoCommand {
+public class UpdateVideo implements UpdateVideoCommand {
 
-	private final SaveVideoCommand port;
+    private final RetrieveVideosById retrieveVideos;
+    private final SaveVideoInfo saveVideoInfo;
 
-	@Override
-	public Video save(Video video) {
-		Video video1 = port.save(video);
-		if (video1 == null) {
-			throw new BusinessException(ErrorMessageEnum.E008.getCode(), ErrorMessageEnum.E008.getMessage());
-		}
-		return video1;
-	}
-
+    @Override
+    public Video update(Video video) {
+        final var exists = retrieveVideos.findVideosById(video.getId());
+        if(video != null) {
+            return saveVideoInfo.save(video);
+        }
+        throw new BusinessException(ErrorMessageEnum.E007.getCode(), ErrorMessageEnum.E007.getMessage());
+    }
 }

@@ -1,15 +1,12 @@
 package com.freemanpivo.chassi.h2.config;
 
 import com.freemanpivo.chassi.h2.entity.CategoryEntity;
-import com.freemanpivo.chassi.h2.entity.UserEntity;
 import com.freemanpivo.chassi.h2.entity.VideoEntity;
 import com.freemanpivo.chassi.h2.repository.CategoryEntityRepository;
 import com.freemanpivo.chassi.h2.repository.VideoEntityRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.time.LocalDate;
 
 @Configuration
 public class UserInH2Configuration {
